@@ -1,0 +1,1402 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Kamu 🤍</title>
+
+    <meta
+        name="description"
+        content="Sebuah pesan kecil untuk seseorang yang sedang berjuang."
+    >
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Inter",
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #050816;
+            color: #ffffff;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(76, 123, 255, .16),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(130, 80, 255, .14),
+                    transparent 30%
+                );
+
+            pointer-events: none;
+
+            z-index: -3;
+        }
+
+
+        /* =====================================================
+           STARS
+        ===================================================== */
+
+        .stars {
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            z-index: -2;
+        }
+
+        .star {
+            position: absolute;
+
+            width: 2px;
+            height: 2px;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            opacity: .5;
+
+            animation:
+                twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: .15;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: .9;
+                transform: scale(1.8);
+            }
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 22px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            z-index: 100;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(5, 8, 22, .85),
+                    transparent
+                );
+        }
+
+        .logo {
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #dce7ff;
+        }
+
+        .logo span {
+            color: #82aaff;
+        }
+
+        .music-btn {
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(255,255,255,.15);
+
+            background:
+                rgba(255,255,255,.07);
+
+            color: white;
+
+            cursor: pointer;
+
+            backdrop-filter: blur(10px);
+
+            transition: .3s;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.08);
+
+            background:
+                rgba(255,255,255,.13);
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+            position: relative;
+
+            min-height: 100vh;
+
+            padding:
+                110px 7% 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+
+            max-width: 1050px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            text-align: center;
+
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .eyebrow {
+
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            border: 1px solid
+                rgba(255,255,255,.12);
+
+            background:
+                rgba(255,255,255,.05);
+
+            color: #9eb9ff;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+
+            font-size:
+                clamp(45px, 8vw, 90px);
+
+            line-height: .95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #9ab9ff,
+                    #d7c7ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #aab6d1;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+        .hero-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 35px;
+
+            padding: 15px 25px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #477cff,
+                    #7758ff
+                );
+
+            color: white;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 15px 40px
+                rgba(71,124,255,.25);
+
+            transition: .3s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(71,124,255,.4);
+        }
+
+        .scroll-down {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            color: #72809e;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+        .scroll-down span {
+
+            display: block;
+
+            width: 1px;
+
+            height: 40px;
+
+            margin: 10px auto 0;
+
+            background:
+                linear-gradient(
+                    #6e8fff,
+                    transparent
+                );
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .section-title {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 60px;
+        }
+
+        .section-title small {
+
+            color: #7fa5ff;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            margin-top: 12px;
+
+            letter-spacing: -2px;
+        }
+
+        .section-title p {
+
+            color: #8d99b3;
+
+            line-height: 1.8;
+
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           MESSAGE
+        ===================================================== */
+
+        .message-box {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 50px;
+
+            border-radius: 30px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.08),
+                    rgba(255,255,255,.025)
+                );
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.25);
+        }
+
+        .message-box p {
+
+            color: #c7d0e4;
+
+            line-height: 2;
+
+            font-size: 17px;
+
+            margin-bottom: 25px;
+        }
+
+        .message-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: #9db9ff;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .quote-section {
+            text-align: center;
+        }
+
+        .quote {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size:
+                clamp(28px, 5vw, 50px);
+
+            line-height: 1.35;
+
+            letter-spacing: -1px;
+
+            color: #e9edff;
+        }
+
+        .quote::before {
+            content: "“";
+
+            display: block;
+
+            font-size: 80px;
+
+            line-height: .5;
+
+            color: #668dff;
+        }
+
+        .quote-author {
+
+            margin-top: 30px;
+
+            color: #77839d;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           CARDS
+        ===================================================== */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+
+            padding: 35px 28px;
+
+            border-radius: 24px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            transition: .35s;
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-8px);
+
+            background:
+                rgba(255,255,255,.07);
+
+            border-color:
+                rgba(130,160,255,.25);
+        }
+
+        .card-icon {
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background:
+                rgba(91,130,255,.12);
+
+            font-size: 25px;
+
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+        }
+
+        .card p {
+
+            color: #8995ad;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FINAL
+        ===================================================== */
+
+        .final {
+
+            text-align: center;
+
+            min-height: 80vh;
+        }
+
+        .final-heart {
+
+            font-size: 65px;
+
+            margin-bottom: 25px;
+
+            animation:
+                heartbeat 1.7s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .final h2 {
+
+            font-size:
+                clamp(38px, 6vw, 65px);
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+        .final p {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            color: #98a4bd;
+
+            line-height: 1.9;
+        }
+
+        .signature {
+
+            margin-top: 40px;
+
+            color: #8cabff;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #505a72;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           FLOATING HEART
+        ===================================================== */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            font-size: 16px;
+
+            opacity: .5;
+
+            pointer-events: none;
+
+            z-index: 1;
+
+            animation:
+                floatUp linear forwards;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: .7;
+            }
+
+            80% {
+                opacity: .5;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================================
+           ANIMATION REVEAL
+        ===================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(35px);
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE TABLET
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            section {
+
+                padding:
+                    100px 6% 70px;
+            }
+
+            .cards {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .message-box {
+
+                padding: 35px 25px;
+            }
+
+            .message-box p {
+
+                font-size: 15px;
+            }
+
+            .hero h1 {
+
+                letter-spacing: -2px;
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE MOBILE
+        ===================================================== */
+
+        @media (max-width: 500px) {
+
+            .navbar {
+
+                padding:
+                    18px 6%;
+            }
+
+            .logo {
+
+                font-size: 13px;
+            }
+
+            section {
+
+                min-height: auto;
+
+                padding:
+                    110px 20px 90px;
+            }
+
+            .hero {
+
+                min-height: 100vh;
+            }
+
+            .hero h1 {
+
+                font-size:
+                    clamp(42px, 14vw, 65px);
+
+                letter-spacing: -3px;
+            }
+
+            .hero p {
+
+                font-size: 14px;
+
+                line-height: 1.8;
+            }
+
+            .section-title {
+
+                margin-bottom: 40px;
+            }
+
+            .section-title h2 {
+
+                font-size: 34px;
+            }
+
+            .message-box {
+
+                padding: 28px 22px;
+
+                border-radius: 22px;
+            }
+
+            .message-box p {
+
+                font-size: 14px;
+
+                line-height: 1.9;
+            }
+
+            .quote {
+
+                font-size: 29px;
+            }
+
+            .quote::before {
+
+                font-size: 60px;
+            }
+
+            .card {
+
+                padding: 28px 23px;
+            }
+
+            .final {
+
+                min-height: 80vh;
+            }
+
+            .final h2 {
+
+                font-size: 40px;
+
+                letter-spacing: -2px;
+            }
+
+            .final p {
+
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STARS
+    ====================================================== -->
+
+    <div class="stars" id="stars"></div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            UNTUK <span>ARINA</span> 
+        </div>
+
+        <button
+            class="music-btn"
+            id="musicBtn"
+            onclick="toggleMusic()"
+            aria-label="Music"
+        >
+            ♪
+        </button>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+                <div class="eyebrow">
+                    FROM SOMEONE WHO CARES
+                </div>
+
+                <h1>
+                    Arina Rahmatika<br>
+                </h1>
+
+                <p>
+                    Nggak semua hari harus berjalan sempurna. Ada hari untuk berjuang, ada hari untuk beristirahat. Yang penting, jangan berhenti percaya sama dirimu sendiri.
+                </p>
+
+                <a
+                    href="#message"
+                    class="hero-button"
+                >
+                    Baca Pesannya
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-down">
+
+
+            <span></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGE
+    ====================================================== -->
+
+    <section id="message">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <small>
+                    Untuk kamu
+                </small>
+
+                <h2>
+                    Aku tahu kamu sedang berjuang.
+                </h2>
+
+                <p>
+                    Dan mungkin tidak semua orang melihat
+                    seberapa keras kamu berusaha.
+                </p>
+
+            </div>
+
+
+            <div class="message-box reveal">
+
+                <p>
+                    Halo Arina...
+                </p>
+
+                <p>
+                    Aku cuma ingin mengingatkan kamu bahwa
+                    <span class="highlight">
+                        kamu tidak harus selalu terlihat kuat.
+                    </span>
+                </p>
+
+                <p>
+                    Kalau hari ini kamu capek,
+                    istirahatlah sebentar.
+                    Kalau sesuatu belum berhasil,
+                    tidak apa-apa.
+                    Kegagalan bukan berarti semuanya selesai.
+                </p>
+
+                <p>
+                    Kadang kita hanya membutuhkan sedikit waktu
+                    untuk mengumpulkan tenaga sebelum kembali
+                    melangkah.
+                </p>
+
+                <p>
+                    Jadi jangan terlalu keras kepada dirimu sendiri.
+                    Lihatlah sejauh mana kamu sudah berjalan.
+                    Ada banyak hal yang dulu terasa mustahil,
+                    tetapi ternyata berhasil kamu lewati.
+                </p>
+
+                <p>
+                    <span class="highlight">
+                        Dan aku percaya, kali ini kamu Pasti bisa.
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ====================================================== -->
+
+    <section class="quote-section">
+
+        <div class="container">
+
+            <div class="reveal">
+
+                <div class="quote">
+
+                    Tidak apa-apa berjalan
+                    perlahan.
+                    Yang penting,
+                    jangan berhenti.
+
+                </div>
+
+                <div class="quote-author">
+                    UNTUK KAMU YANG SEDANG BERJUANG
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REMEMBER
+    ====================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <small>
+                    Ingat ini
+                </small>
+
+                <h2>
+                    Beberapa hal kecil.
+                </h2>
+
+                <p>
+                    Saat semuanya terasa terlalu berat,
+                    ingat beberapa hal sederhana ini.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card reveal">
+
+                    
+
+                    <h3>
+                        Pelan-pelan
+                    </h3>
+
+                    <p>
+                        Kamu tidak perlu menyelesaikan
+                        semuanya dalam satu hari.
+                        Satu langkah kecil tetap berarti.
+                    </p>
+
+                </div>
+
+
+                <div class="card reveal">
+
+                    
+
+                    <h3>
+                        Istirahat
+                    </h3>
+
+                    <p>
+                        Beristirahat bukan berarti menyerah.
+                        Kadang tubuh dan pikiran hanya
+                        membutuhkan waktu untuk bernapas.
+                    </p>
+
+                </div>
+
+
+                <div class="card reveal">
+
+
+                    <h3>
+                        Percaya
+                    </h3>
+
+                    <p>
+                        Jangan biarkan satu hari yang buruk
+                        membuatmu meragukan semua kemampuan
+                        yang kamu punya.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL
+    ====================================================== -->
+
+    <section class="final">
+
+        <div class="container">
+
+            <div class="reveal">
+
+                <div class="final-heart">
+                    🤍
+                </div>
+
+                <h2>
+                    Kamu tidak sendirian.
+                </h2>
+
+                <p>
+                    Apapun yang sedang kamu hadapi sekarang,
+                    semoga kamu selalu menemukan alasan untuk
+                    terus melangkah.
+
+                    Tidak perlu terburu-buru.
+                    Tidak perlu sempurna.
+
+                    Cukup terus mencoba.
+                </p>
+
+                <div class="signature">
+
+                    Aku percaya kamu pasti bisa lewatin ini semua.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        Made with a little bit of care 
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           CREATE STARS
+        ====================================================== */
+
+        const stars =
+            document.getElementById("stars");
+
+        for (let i = 0; i < 120; i++) {
+
+            const star =
+                document.createElement("div");
+
+            star.className = "star";
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
+            star.style.animationDelay =
+                Math.random() * 4 + "s";
+
+            star.style.animationDuration =
+                2 + Math.random() * 4 + "s";
+
+            stars.appendChild(star);
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: .15
+                }
+
+            );
+
+
+        revealElements.forEach(
+            element => observer.observe(element)
+        );
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ====================================================== */
+
+        const hearts = [
+            "🤍",
+            "💙",
+            "✨",
+            "🌙"
+        ];
+
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className =
+                "floating-heart";
+
+            heart.innerText =
+                hearts[
+                    Math.floor(
+                        Math.random() *
+                        hearts.length
+                    )
+                ];
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+            heart.style.animationDuration =
+                7 + Math.random() * 8 + "s";
+
+            heart.style.fontSize =
+                12 + Math.random() * 12 + "px";
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 15000);
+
+        }
+
+
+        setInterval(
+            createHeart,
+            1000
+        );
+
+
+        /* =====================================================
+           MUSIC
+           
+           Kalau mau menggunakan musik:
+           1. Masukkan file musik.mp3
+              di folder yang sama.
+           2. Hapus tanda komentar pada audio.
+        ====================================================== */
+
+        /*
+        const music = new Audio("musik.mp3");
+
+        music.loop = true;
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play();
+
+                document.getElementById("musicBtn")
+                    .innerHTML = "❚❚";
+
+            } else {
+
+                music.pause();
+
+                document.getElementById("musicBtn")
+                    .innerHTML = "♪";
+
+            }
+
+        }
+        */
+
+
+        /* =====================================================
+           MUSIC BUTTON DEFAULT
+        ====================================================== */
+
+        function toggleMusic() {
+
+            alert(
+                "Tambahkan file musik.mp3 di folder website, lalu aktifkan kode musik di bagian JavaScript."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
