@@ -1,16 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Untuk Kamu 🤍</title>
+    <title>Untuk Arina — Sebuah Perayaan Kecil ✨</title>
 
-    <meta
-        name="description"
-        content="Sebuah pesan kecil untuk seseorang yang sedang berjuang."
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -29,199 +28,87 @@
         }
 
         body {
-            font-family:
-                "Inter",
-                "Segoe UI",
-                Arial,
-                sans-serif;
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(173, 91, 127, .16),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 60%,
+                    rgba(221, 171, 128, .12),
+                    transparent 28%
+                ),
+                #170f19;
 
-            background: #050816;
-            color: #ffffff;
-
+            color: #f8edf2;
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        /* =====================================================
-           BACKGROUND
-        ===================================================== */
-
         body::before {
             content: "";
-
             position: fixed;
             inset: 0;
-
-            background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(76, 123, 255, .16),
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    circle at 80% 70%,
-                    rgba(130, 80, 255, .14),
-                    transparent 30%
-                );
-
             pointer-events: none;
+            z-index: 100;
+            opacity: .035;
 
-            z-index: -3;
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
         }
 
 
         /* =====================================================
-           STARS
+           VARIABLES
         ===================================================== */
 
-        .stars {
-            position: fixed;
-
-            inset: 0;
-
-            pointer-events: none;
-
-            overflow: hidden;
-
-            z-index: -2;
-        }
-
-        .star {
-            position: absolute;
-
-            width: 2px;
-            height: 2px;
-
-            background: #ffffff;
-
-            border-radius: 50%;
-
-            opacity: .5;
-
-            animation:
-                twinkle 3s infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: .15;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: .9;
-                transform: scale(1.8);
-            }
+        :root {
+            --wine: #8d405f;
+            --wine-light: #b76b87;
+            --cream: #f7e9dd;
+            --soft: #eacfd7;
+            --gold: #d7ae78;
+            --muted: #bcaab1;
         }
 
 
         /* =====================================================
-           NAVBAR
+           NAVIGATION
         ===================================================== */
 
-        .navbar {
+        .nav {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
 
             padding: 22px 7%;
 
             display: flex;
-
-            align-items: center;
-
             justify-content: space-between;
-
-            z-index: 100;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(5, 8, 22, .85),
-                    transparent
-                );
-        }
-
-        .logo {
-            font-size: 15px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            color: #dce7ff;
-        }
-
-        .logo span {
-            color: #82aaff;
-        }
-
-        .music-btn {
-
-            width: 42px;
-            height: 42px;
-
-            border-radius: 50%;
-
-            border: 1px solid
-                rgba(255,255,255,.15);
-
-            background:
-                rgba(255,255,255,.07);
-
-            color: white;
-
-            cursor: pointer;
-
-            backdrop-filter: blur(10px);
-
-            transition: .3s;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.08);
-
-            background:
-                rgba(255,255,255,.13);
-        }
-
-
-        /* =====================================================
-           SECTION
-        ===================================================== */
-
-        section {
-            position: relative;
-
-            min-height: 100vh;
-
-            padding:
-                110px 7% 80px;
-
-            display: flex;
-
             align-items: center;
 
-            justify-content: center;
+            z-index: 50;
+
+            background: linear-gradient(
+                to bottom,
+                rgba(23,15,25,.9),
+                rgba(23,15,25,0)
+            );
         }
 
-        .container {
-            width: 100%;
+        .nav-logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            letter-spacing: .08em;
+            color: var(--cream);
+        }
 
-            max-width: 1050px;
-
-            margin: auto;
+        .nav-number {
+            font-size: 11px;
+            letter-spacing: .22em;
+            color: var(--muted);
         }
 
 
@@ -230,195 +117,423 @@
         ===================================================== */
 
         .hero {
-            text-align: center;
-
             min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 130px 9% 80px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            width: 500px;
+            height: 500px;
+
+            right: -180px;
+            top: 10%;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(172,71,108,.25),
+                    transparent 68%
+                );
+
+            filter: blur(20px);
+            pointer-events: none;
         }
 
         .hero-content {
-            max-width: 800px;
-
-            margin: auto;
+            max-width: 950px;
+            position: relative;
+            z-index: 2;
         }
 
         .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
 
-            display: inline-block;
+            color: var(--gold);
 
-            padding: 8px 16px;
-
-            border-radius: 50px;
-
-            border: 1px solid
-                rgba(255,255,255,.12);
-
-            background:
-                rgba(255,255,255,.05);
-
-            color: #9eb9ff;
-
-            font-size: 12px;
-
-            letter-spacing: 2px;
-
+            font-size: 11px;
+            letter-spacing: .3em;
             text-transform: uppercase;
 
-            margin-bottom: 25px;
+            margin-bottom: 28px;
+
+            opacity: 0;
+            animation: reveal .9s .2s forwards;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 45px;
+            height: 1px;
+            background: var(--gold);
         }
 
         .hero h1 {
+            font-family: "Cormorant Garamond", serif;
 
-            font-size:
-                clamp(45px, 8vw, 90px);
+            font-size: clamp(80px, 14vw, 190px);
 
-            line-height: .95;
+            font-weight: 500;
 
-            letter-spacing: -4px;
+            line-height: .75;
 
-            margin-bottom: 30px;
+            letter-spacing: -.05em;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #9ab9ff,
-                    #d7c7ff
-                );
+            color: var(--cream);
 
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: heroTitle 1.2s .4s forwards;
         }
 
-        .hero p {
-
-            max-width: 650px;
-
-            margin: auto;
-
-            color: #aab6d1;
-
-            font-size: 17px;
-
-            line-height: 1.9;
-        }
-
-        .hero-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            margin-top: 35px;
-
-            padding: 15px 25px;
-
-            border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #477cff,
-                    #7758ff
-                );
-
-            color: white;
-
-            font-weight: 600;
-
-            box-shadow:
-                0 15px 40px
-                rgba(71,124,255,.25);
-
-            transition: .3s;
-        }
-
-        .hero-button:hover {
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 20px 50px
-                rgba(71,124,255,.4);
-        }
-
-        .scroll-down {
-
-            position: absolute;
-
-            bottom: 30px;
-
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            color: #72809e;
-
-            font-size: 12px;
-
-            letter-spacing: 2px;
-        }
-
-        .scroll-down span {
-
+        .hero h1 span {
             display: block;
 
-            width: 1px;
+            margin-left: 12%;
 
-            height: 40px;
+            color: transparent;
 
-            margin: 10px auto 0;
+            -webkit-text-stroke: 1px var(--wine-light);
+        }
 
-            background:
-                linear-gradient(
-                    #6e8fff,
-                    transparent
-                );
+        .hero-description {
+            margin-top: 50px;
+            margin-left: 12%;
+
+            max-width: 510px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.9;
+
+            opacity: 0;
+            animation: reveal 1s .9s forwards;
+        }
+
+        .scroll-hint {
+            position: absolute;
+
+            bottom: 35px;
+            left: 9%;
+
+            font-size: 10px;
+            letter-spacing: .25em;
+
+            color: #8f7e86;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            animation: floating 2.5s ease-in-out infinite;
+        }
+
+        .scroll-hint span {
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #8f7e86;
         }
 
 
         /* =====================================================
-           SECTION TITLE
+           GENERAL SECTION
         ===================================================== */
 
+        section {
+            position: relative;
+        }
+
+        .section {
+            padding: 150px 9%;
+        }
+
+        .section-label {
+            color: var(--gold);
+
+            font-size: 10px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+
+            margin-bottom: 24px;
+        }
+
         .section-title {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(50px, 7vw, 90px);
+
+            font-weight: 500;
+
+            line-height: .95;
+
+            max-width: 800px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            min-height: 75vh;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+
+            gap: 80px;
+        }
+
+        .intro-big {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(42px, 5vw, 68px);
+
+            line-height: 1.05;
+
+            color: var(--cream);
+        }
+
+        .intro-big em {
+            color: var(--wine-light);
+        }
+
+        .intro-text {
+            max-width: 480px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        .intro-text strong {
+            color: var(--cream);
+            font-weight: 500;
+        }
+
+        /* =====================================================
+           GALERI FOTO
+        ===================================================== */
+
+        .photo-gallery {
+            width: min(1050px, 100%);
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 22px;
+        }
+
+        .memory-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 360px;
+            background: #f2e6dc;
+            padding: 10px;
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.42),
+                0 8px 20px rgba(0,0,0,.2);
+            opacity: 0;
+            transform: translateY(45px);
+            transition:
+                opacity .9s ease,
+                transform .9s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .photo-gallery.active .memory-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .memory-card:nth-child(1) { grid-column: span 7; transition-delay: .05s; }
+        .memory-card:nth-child(2) { grid-column: span 5; transition-delay: .18s; }
+        .memory-card:nth-child(3) { grid-column: span 5; transition-delay: .31s; }
+        .memory-card:nth-child(4) { grid-column: span 7; transition-delay: .44s; }
+
+        .memory-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            object-fit: cover;
+            filter: saturate(.88) contrast(.97);
+            transition: transform .7s ease, filter .7s ease;
+            background: #251923;
+        }
+
+        .memory-card:hover img {
+            transform: scale(1.045);
+            filter: saturate(1) contrast(1);
+        }
+
+        .memory-card::after {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            pointer-events: none;
+            border: 1px solid rgba(255,255,255,.16);
+        }
+
+        .memory-caption {
+            position: absolute;
+            left: 26px;
+            right: 26px;
+            bottom: 25px;
+            z-index: 2;
+            color: #fff7ef;
+            text-shadow: 0 2px 15px rgba(0,0,0,.6);
+        }
+
+        .memory-caption strong {
+            display: block;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        .memory-caption span {
+            display: block;
+            margin-top: 4px;
+            font-size: 11px;
+            letter-spacing: .12em;
+            color: #f2d8c9;
+        }
+
+        .photo-note {
+            max-width: 650px;
+            margin: 55px auto 0;
+            text-align: center;
+            color: var(--muted);
+            line-height: 1.9;
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           TRANSITION
+        ===================================================== */
+
+        .transition {
+            min-height: 70vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             text-align: center;
 
-            max-width: 700px;
-
-            margin: 0 auto 60px;
+            padding: 100px 9%;
         }
 
-        .section-title small {
-
-            color: #7fa5ff;
-
-            letter-spacing: 3px;
-
-            font-size: 11px;
-
-            text-transform: uppercase;
+        .transition-inner {
+            max-width: 900px;
         }
 
-        .section-title h2 {
+        .transition-small {
+            color: var(--muted);
 
-            font-size:
-                clamp(32px, 5vw, 55px);
+            font-size: 13px;
 
-            margin-top: 12px;
+            letter-spacing: .12em;
 
-            letter-spacing: -2px;
+            margin-bottom: 30px;
         }
 
-        .section-title p {
+        .transition h2 {
+            font-family: "Cormorant Garamond", serif;
 
-            color: #8d99b3;
+            font-size: clamp(55px, 9vw, 120px);
 
-            line-height: 1.8;
+            line-height: .9;
 
-            margin-top: 15px;
+            font-weight: 500;
+
+            color: var(--cream);
+        }
+
+        .transition h2 span {
+            color: var(--wine-light);
+        }
+
+
+        /* =====================================================
+           CONGRATULATIONS
+        ===================================================== */
+
+        .congrats {
+            min-height: 90vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(132,55,88,.25),
+                    transparent 50%
+                );
+
+            display: flex;
+            align-items: center;
+        }
+
+        .congrats-grid {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+        .congrats-number {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(120px, 18vw, 250px);
+
+            line-height: .7;
+
+            color: transparent;
+
+            -webkit-text-stroke: 1px rgba(215,174,120,.4);
+        }
+
+        .congrats-content h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(55px, 8vw, 110px);
+
+            line-height: .85;
+
+            font-weight: 500;
+        }
+
+        .congrats-content h2 span {
+            color: var(--wine-light);
+        }
+
+        .congrats-content p {
+            margin-top: 35px;
+
+            max-width: 600px;
+
+            color: var(--muted);
+
+            line-height: 1.9;
+
+            font-size: 15px;
         }
 
 
@@ -426,181 +541,56 @@
            MESSAGE
         ===================================================== */
 
-        .message-box {
+        .message {
+            min-height: 85vh;
 
-            max-width: 850px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            margin: auto;
-
-            padding: 50px;
-
-            border-radius: 30px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.1);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.08),
-                    rgba(255,255,255,.025)
-                );
-
-            backdrop-filter: blur(20px);
-
-            box-shadow:
-                0 30px 80px
-                rgba(0,0,0,.25);
-        }
-
-        .message-box p {
-
-            color: #c7d0e4;
-
-            line-height: 2;
-
-            font-size: 17px;
-
-            margin-bottom: 25px;
-        }
-
-        .message-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight {
-            color: #9db9ff;
-
-            font-weight: 600;
-        }
-
-
-        /* =====================================================
-           QUOTE
-        ===================================================== */
-
-        .quote-section {
             text-align: center;
         }
 
-        .quote {
-
-            max-width: 800px;
-
-            margin: auto;
-
-            font-size:
-                clamp(28px, 5vw, 50px);
-
-            line-height: 1.35;
-
-            letter-spacing: -1px;
-
-            color: #e9edff;
+        .message-box {
+            max-width: 820px;
         }
 
-        .quote::before {
+        .message-box::before {
             content: "“";
 
             display: block;
 
-            font-size: 80px;
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 100px;
 
             line-height: .5;
 
-            color: #668dff;
+            color: var(--gold);
+
+            opacity: .65;
         }
 
-        .quote-author {
+        .message-box p {
+            font-family: "Cormorant Garamond", serif;
 
-            margin-top: 30px;
+            font-size: clamp(32px, 4vw, 53px);
 
-            color: #77839d;
+            line-height: 1.25;
 
-            font-size: 13px;
-
-            letter-spacing: 2px;
+            color: var(--cream);
         }
 
+        .message-sign {
+            margin-top: 35px;
 
-        /* =====================================================
-           CARDS
-        ===================================================== */
+            color: var(--wine-light);
 
-        .cards {
+            font-size: 12px;
 
-            display: grid;
+            letter-spacing: .2em;
 
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-        .card {
-
-            padding: 35px 28px;
-
-            border-radius: 24px;
-
-            background:
-                rgba(255,255,255,.045);
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            transition: .35s;
-        }
-
-        .card:hover {
-
-            transform:
-                translateY(-8px);
-
-            background:
-                rgba(255,255,255,.07);
-
-            border-color:
-                rgba(130,160,255,.25);
-        }
-
-        .card-icon {
-
-            width: 55px;
-            height: 55px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 16px;
-
-            background:
-                rgba(91,130,255,.12);
-
-            font-size: 25px;
-
-            margin-bottom: 22px;
-        }
-
-        .card h3 {
-
-            font-size: 20px;
-
-            margin-bottom: 12px;
-        }
-
-        .card p {
-
-            color: #8995ad;
-
-            line-height: 1.8;
-
-            font-size: 14px;
+            text-transform: uppercase;
         }
 
 
@@ -609,291 +599,724 @@
         ===================================================== */
 
         .final {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             text-align: center;
 
-            min-height: 80vh;
-        }
+            padding: 100px 8%;
 
-        .final-heart {
-
-            font-size: 65px;
-
-            margin-bottom: 25px;
-
-            animation:
-                heartbeat 1.7s infinite;
-        }
-
-        @keyframes heartbeat {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.15);
-            }
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(141,64,95,.25),
+                    transparent 45%
+                );
         }
 
         .final h2 {
+            font-family: "Cormorant Garamond", serif;
 
-            font-size:
-                clamp(38px, 6vw, 65px);
+            font-size: clamp(70px, 13vw, 170px);
 
-            letter-spacing: -3px;
+            font-weight: 500;
 
-            margin-bottom: 20px;
+            line-height: .8;
+
+            color: var(--cream);
+        }
+
+        .final h2 span {
+            display: block;
+
+            color: var(--wine-light);
+
+            margin-top: 20px;
         }
 
         .final p {
+            margin-top: 55px;
 
-            max-width: 600px;
-
-            margin: auto;
-
-            color: #98a4bd;
-
-            line-height: 1.9;
-        }
-
-        .signature {
-
-            margin-top: 40px;
-
-            color: #8cabff;
-
-            font-size: 14px;
-
-            letter-spacing: 1px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-
-            text-align: center;
-
-            padding: 30px;
-
-            color: #505a72;
+            color: var(--muted);
 
             font-size: 12px;
+
+            letter-spacing: .12em;
         }
 
 
         /* =====================================================
-           FLOATING HEART
-        ===================================================== */
-
-        .floating-heart {
-
-            position: fixed;
-
-            bottom: -30px;
-
-            font-size: 16px;
-
-            opacity: .5;
-
-            pointer-events: none;
-
-            z-index: 1;
-
-            animation:
-                floatUp linear forwards;
-        }
-
-        @keyframes floatUp {
-
-            0% {
-                transform:
-                    translateY(0)
-                    rotate(0);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: .7;
-            }
-
-            80% {
-                opacity: .5;
-            }
-
-            100% {
-                transform:
-                    translateY(-110vh)
-                    rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-
-        /* =====================================================
-           ANIMATION REVEAL
+           SCROLL REVEAL
         ===================================================== */
 
         .reveal {
-
             opacity: 0;
 
-            transform:
-                translateY(35px);
+            transform: translateY(60px);
 
             transition:
-                opacity .8s ease,
-                transform .8s ease;
+                opacity 1s ease,
+                transform 1s cubic-bezier(.2,.8,.2,1);
         }
 
-        .reveal.active {
+        .reveal-left {
+            opacity: 0;
 
+            transform: translateX(-70px);
+
+            transition:
+                opacity 1s ease,
+                transform 1s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal-right {
+            opacity: 0;
+
+            transform: translateX(70px);
+
+            transition:
+                opacity 1s ease,
+                transform 1s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .active.reveal,
+        .active.reveal-left,
+        .active.reveal-right {
             opacity: 1;
 
-            transform:
-                translateY(0);
+            transform: translate(0,0);
         }
 
 
         /* =====================================================
-           RESPONSIVE TABLET
+           ANIMATIONS
         ===================================================== */
 
-        @media (max-width: 800px) {
+        @keyframes reveal {
 
-            section {
-
-                padding:
-                    100px 6% 70px;
+            from {
+                opacity: 0;
+                transform: translateY(25px);
             }
 
-            .cards {
-
-                grid-template-columns:
-                    1fr;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
 
-            .message-box {
+        }
 
-                padding: 35px 25px;
+        @keyframes heroTitle {
+
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+                clip-path: inset(100% 0 0 0);
             }
 
-            .message-box p {
-
-                font-size: 15px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                clip-path: inset(0 0 0 0);
             }
 
-            .hero h1 {
+        }
 
-                letter-spacing: -2px;
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
             }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        @keyframes photoEnter {
+
+            0% {
+                opacity: 0;
+                transform:
+                    translateY(-50px)
+                    rotate(0deg);
+            }
+
+            70% {
+                opacity: 1;
+                transform:
+                    translateY(8px)
+                    rotate(0deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
         }
 
 
         /* =====================================================
-           RESPONSIVE MOBILE
+           NATURAL PENDULUM
         ===================================================== */
 
-        @media (max-width: 500px) {
+        @keyframes photoPendulum {
 
-            .navbar {
+            0% {
+                transform: rotate(-2.8deg);
+            }
 
+            14% {
+                transform: rotate(2.4deg);
+            }
+
+            28% {
+                transform: rotate(-2deg);
+            }
+
+            42% {
+                transform: rotate(1.55deg);
+            }
+
+            56% {
+                transform: rotate(-1.15deg);
+            }
+
+            70% {
+                transform: rotate(.8deg);
+            }
+
+            84% {
+                transform: rotate(-.45deg);
+            }
+
+            100% {
+                transform: rotate(.25deg);
+            }
+
+        }
+
+
+        @keyframes shadowAppear {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: .55;
+            }
+
+        }
+
+        @keyframes shadowMove {
+
+            0% {
+                transform: scaleX(.95);
+                opacity: .45;
+            }
+
+            14% {
+                transform: scaleX(1.05);
+                opacity: .6;
+            }
+
+            28% {
+                transform: scaleX(.98);
+                opacity: .48;
+            }
+
+            42% {
+                transform: scaleX(1.04);
+                opacity: .57;
+            }
+
+            56% {
+                transform: scaleX(.99);
+                opacity: .5;
+            }
+
+            70% {
+                transform: scaleX(1.02);
+                opacity: .55;
+            }
+
+            100% {
+                transform: scaleX(1);
+                opacity: .5;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            html {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            body {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .nav {
                 padding:
-                    18px 6%;
+                    max(16px, env(safe-area-inset-top))
+                    20px
+                    16px;
             }
 
-            .logo {
-
-                font-size: 13px;
+            .nav-logo {
+                font-size: 19px;
+                letter-spacing: .06em;
             }
 
-            section {
-
-                min-height: auto;
-
-                padding:
-                    110px 20px 90px;
+            .nav-number {
+                font-size: 9px;
+                letter-spacing: .16em;
             }
+
+            /* =========================
+               HERO MOBILE
+            ========================= */
 
             .hero {
+                min-height: 100svh;
+                padding:
+                    125px 22px
+                    95px;
+                align-items: center;
+            }
 
-                min-height: 100vh;
+            .hero::after {
+                width: 320px;
+                height: 320px;
+                right: -170px;
+                top: 22%;
+            }
+
+            .hero-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .eyebrow {
+                gap: 9px;
+                font-size: 8px;
+                letter-spacing: .22em;
+                margin-bottom: 22px;
+            }
+
+            .eyebrow::before {
+                width: 25px;
             }
 
             .hero h1 {
-
-                font-size:
-                    clamp(42px, 14vw, 65px);
-
-                letter-spacing: -3px;
+                font-size: clamp(64px, 20vw, 100px);
+                line-height: .78;
+                letter-spacing: -.055em;
+                overflow-wrap: normal;
             }
 
-            .hero p {
+            .hero h1 span {
+                margin-left: 9%;
+                margin-top: 4px;
+            }
 
-                font-size: 14px;
+            .hero-description {
+                margin-top: 34px;
+                margin-left: 8%;
+                max-width: 90%;
+                font-size: 13px;
+                line-height: 1.85;
+            }
 
-                line-height: 1.8;
+            .scroll-hint {
+                left: 22px;
+                bottom: 28px;
+                font-size: 8px;
+                letter-spacing: .16em;
+                gap: 9px;
+            }
+
+            .scroll-hint span {
+                width: 20px;
+            }
+
+            /* =========================
+               GENERAL SECTION
+            ========================= */
+
+            .section {
+                padding:
+                    90px 22px;
+            }
+
+            .section-label {
+                font-size: 8px;
+                letter-spacing: .22em;
+                margin-bottom: 18px;
             }
 
             .section-title {
-
-                margin-bottom: 40px;
+                font-size: clamp(43px, 13vw, 64px);
+                line-height: .92;
+                max-width: 100%;
             }
 
-            .section-title h2 {
+            /* =========================
+               INTRO MOBILE
+            ========================= */
 
-                font-size: 34px;
+            .intro {
+                display: block;
+                min-height: auto;
             }
 
-            .message-box {
-
-                padding: 28px 22px;
-
-                border-radius: 22px;
+            .intro-big {
+                font-size: clamp(42px, 13vw, 62px);
+                line-height: .98;
+                margin-bottom: 38px;
             }
 
-            .message-box p {
-
-                font-size: 14px;
-
+            .intro-text {
+                max-width: 100%;
+                font-size: 13.5px;
                 line-height: 1.9;
             }
 
-            .quote {
-
-                font-size: 29px;
+            .intro-text br {
+                display: none;
             }
 
-            .quote::before {
-
-                font-size: 60px;
+            .intro-text p + p {
+                margin-top: 24px;
             }
 
-            .card {
+            /* =========================
+               FOTO MOBILE
+            ========================= */
 
-                padding: 28px 23px;
+            .photo-section {
+                padding-top: 85px;
+                padding-bottom: 100px;
             }
+
+            .photo-intro {
+                margin-bottom: 38px;
+            }
+
+            .photo-intro > p {
+                margin-top: 24px;
+                max-width: 100%;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.85;
+            }
+
+            .photo-gallery {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .memory-card,
+            .memory-card:nth-child(1),
+            .memory-card:nth-child(2),
+            .memory-card:nth-child(3),
+            .memory-card:nth-child(4) {
+                grid-column: span 1;
+                width: 100%;
+                min-height: 0;
+                aspect-ratio: 4 / 5;
+                padding: 8px;
+            }
+
+            .memory-card img {
+                width: 100%;
+                height: 100%;
+                min-height: 0;
+                object-fit: cover;
+            }
+
+            .memory-card::after {
+                inset: 8px;
+            }
+
+            .memory-caption {
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .memory-caption strong {
+                font-size: 25px;
+                line-height: 1;
+            }
+
+            .memory-caption span {
+                margin-top: 6px;
+                font-size: 8px;
+                line-height: 1.4;
+                letter-spacing: .12em;
+            }
+
+            .photo-note {
+                margin: 30px auto 0;
+                max-width: 95%;
+                font-size: 12.5px;
+                line-height: 1.8;
+            }
+
+            /* =========================
+               TRANSITION MOBILE
+            ========================= */
+
+            .transition {
+                min-height: 58svh;
+                padding: 85px 22px;
+            }
+
+            .transition-inner {
+                width: 100%;
+            }
+
+            .transition-small {
+                font-size: 10px;
+                line-height: 1.6;
+                letter-spacing: .08em;
+                margin-bottom: 22px;
+            }
+
+            .transition h2 {
+                font-size: clamp(48px, 14vw, 78px);
+                line-height: .88;
+            }
+
+            /* =========================
+               CONGRATULATIONS MOBILE
+            ========================= */
+
+            .congrats {
+                min-height: auto;
+            }
+
+            .congrats-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+            }
+
+            .congrats-number {
+                font-size: clamp(100px, 31vw, 150px);
+                line-height: .65;
+            }
+
+            .congrats-content {
+                width: 100%;
+            }
+
+            .congrats-content h2 {
+                font-size: clamp(50px, 15vw, 76px);
+                line-height: .88;
+            }
+
+            .congrats-content p {
+                margin-top: 26px;
+                max-width: 100%;
+                font-size: 13.5px;
+                line-height: 1.9;
+            }
+
+            /* =========================
+               MESSAGE MOBILE
+            ========================= */
+
+            .message {
+                min-height: 75svh;
+                padding:
+                    90px 22px;
+            }
+
+            .message-box {
+                width: 100%;
+            }
+
+            .message-box::before {
+                font-size: 72px;
+                margin-bottom: 5px;
+            }
+
+            .message-box p {
+                font-size: clamp(28px, 8.5vw, 42px);
+                line-height: 1.2;
+            }
+
+            .message-sign {
+                margin-top: 28px;
+                font-size: 9px;
+                letter-spacing: .16em;
+            }
+
+            /* =========================
+               FINAL MOBILE
+            ========================= */
 
             .final {
-
-                min-height: 80vh;
+                min-height: 88svh;
+                padding:
+                    90px 22px
+                    calc(90px + env(safe-area-inset-bottom));
             }
 
             .final h2 {
+                font-size: clamp(58px, 17vw, 92px);
+                line-height: .82;
+                letter-spacing: -.04em;
+            }
 
-                font-size: 40px;
-
-                letter-spacing: -2px;
+            .final h2 span {
+                margin-top: 12px;
             }
 
             .final p {
-
-                font-size: 14px;
+                margin-top: 38px;
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 9px;
+                line-height: 1.7;
+                letter-spacing: .1em;
             }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .nav-logo {
+                font-size: 17px;
+            }
+
+            .nav-number {
+                font-size: 8px;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(60px, 19vw, 86px);
+            }
+
+            .hero-description {
+                margin-left: 5%;
+                max-width: 93%;
+                font-size: 12.5px;
+            }
+
+            .section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .intro-big {
+                font-size: 44px;
+            }
+
+            .section-title {
+                font-size: 44px;
+            }
+
+            .memory-card,
+            .memory-card:nth-child(1),
+            .memory-card:nth-child(2),
+            .memory-card:nth-child(3),
+            .memory-card:nth-child(4) {
+                aspect-ratio: 3 / 4;
+            }
+
+            .memory-caption {
+                left: 17px;
+                right: 17px;
+                bottom: 17px;
+            }
+
+            .memory-caption strong {
+                font-size: 23px;
+            }
+
+            .transition {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .transition h2 {
+                font-size: 48px;
+            }
+
+            .congrats-number {
+                font-size: 100px;
+            }
+
+            .congrats-content h2 {
+                font-size: 52px;
+            }
+
+            .message {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .message-box p {
+                font-size: 29px;
+            }
+
+            .final {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .final h2 {
+                font-size: 61px;
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+
         }
 
     </style>
@@ -904,142 +1327,237 @@
 
 
     <!-- =====================================================
-         STARS
-    ====================================================== -->
+         NAV
+    ===================================================== -->
 
-    <div class="stars" id="stars"></div>
+    <nav class="nav">
 
-
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            UNTUK <span>ARINA</span> 
+        <div class="nav-logo">
+            Untuk Arina Rahmatika.
         </div>
 
-        <button
-            class="music-btn"
-            id="musicBtn"
-            onclick="toggleMusic()"
-            aria-label="Music"
-        >
-            ♪
-        </button>
+        <div class="nav-number">
+            01 / 06
+        </div>
 
     </nav>
 
 
+
     <!-- =====================================================
          HERO
-    ====================================================== -->
+    ===================================================== -->
 
     <section class="hero">
 
-        <div class="container">
+        <div class="hero-content">
 
-            <div class="hero-content reveal">
-
-                <div class="eyebrow">
-                    FROM SOMEONE WHO CARES
-                </div>
-
-                <h1>
-                    Arina Rahmatika<br>
-                </h1>
-
-                <p>
-                    Nggak semua hari harus berjalan sempurna. Ada hari untuk berjuang, ada hari untuk beristirahat. Yang penting, jangan berhenti percaya sama dirimu sendiri.
-                </p>
-
-                <a
-                    href="#message"
-                    class="hero-button"
-                >
-                    Baca Pesannya
-                    <span>↓</span>
-                </a>
-
+            <div class="eyebrow">
+                sebuah perayaan kecil
             </div>
+
+            <h1>
+                Arina Rahmatika
+                <span>berhasil.</span>
+            </h1>
+
+            <p class="hero-description">
+                Ada banyak hal yang mungkin terlihat sederhana
+                dari luar. Tapi hanya kamu yang tahu berapa banyak
+                usaha, waktu, rasa lelah, dan doa yang sudah dilewati
+                sampai akhirnya berada di titik ini.
+            </p>
 
         </div>
 
-        <div class="scroll-down">
 
-
+        <div class="scroll-hint">
             <span></span>
+            GULIR UNTUK MELANJUTKAN
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+    <section class="section intro">
+
+        <div class="intro-big reveal-left">
+
+            Satu bab
+            <br>
+
+            <em>telah selesai.</em>
+
+        </div>
+
+
+        <div class="intro-text reveal-right">
+
+            <p>
+                Ada momen ketika seseorang akhirnya berhenti
+                sejenak dan menyadari bahwa perjalanan panjang
+                yang selama ini dijalani ternyata sudah sampai
+                di satu titik penting.
+            </p>
+
+            <br>
+
+            <p>
+                Hari ini adalah salah satunya.
+                <strong>
+                    Tahapan komprehensif itu sudah kamu lewati.
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Jadi untuk hari ini, tidak perlu memikirkan
+                apa yang belum selesai. Nikmati dulu satu
+                pencapaian kecil yang sebenarnya sangat berarti.
+            </p>
 
         </div>
 
     </section>
 
 
+
     <!-- =====================================================
-         MESSAGE
-    ====================================================== -->
+         PHOTO
+    ===================================================== -->
 
-    <section id="message">
+    <section class="section photo-section">
 
-        <div class="container">
+        <div class="photo-intro reveal">
 
-            <div class="section-title reveal">
+            <div class="section-label">
+                beberapa kenangan
+            </div>
 
-                <small>
-                    Untuk kamu
-                </small>
+            <h2 class="section-title">
+                Momen-momen yang layak disimpan.
+            </h2>
+
+            <p>
+                Tidak harus menjadi momen besar untuk menjadi berarti.
+                Kadang, sebuah foto sudah cukup untuk mengingatkan
+                kita pada perasaan yang pernah ada.
+            </p>
+
+        </div>
+
+        <div class="photo-gallery reveal">
+
+            <article class="memory-card">
+                <img src="moment1.jpg" alt="Kenangan pertama Arina">
+                <div class="memory-caption">
+                    <strong>Satu langkah</strong>
+                    <span>AWAL DARI PERJALANAN</span>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="moment2.jpg" alt="Kenangan kedua Arina">
+                <div class="memory-caption">
+                    <strong>Satu cerita</strong>
+                    <span>HAL KECIL YANG LAYAK DIINGAT</span>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="moment3.jpg" alt="Kenangan ketiga Arina">
+                <div class="memory-caption">
+                    <strong>Satu senyum</strong>
+                    <span>SEBUAH MOMEN SEDERHANA</span>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="moment4.jpeg" alt="Kenangan keempat Arina">
+                <div class="memory-caption">
+                    <strong>Sampai di sini</strong>
+                    <span>AKHIR DARI SATU BAB</span>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="photo-note reveal">
+            Mungkin nanti waktu akan membuat banyak hal berubah.
+            Tapi semoga foto-foto ini tetap menjadi pengingat kecil
+            bahwa pernah ada satu masa ketika kamu berjuang,
+            bertahan, dan akhirnya berhasil melewatinya.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRANSITION
+    ===================================================== -->
+
+    <section class="transition">
+
+        <div class="transition-inner reveal">
+
+            <div class="transition-small">
+                dan sekarang...
+            </div>
+
+            <h2>
+                mari kita ucapkan
+                <br>
+                <span>selamat.</span>
+            </h2>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONGRATULATIONS
+    ===================================================== -->
+
+    <section class="section congrats">
+
+        <div class="congrats-grid">
+
+            <div class="congrats-number reveal-left">
+                01
+            </div>
+
+
+            <div class="congrats-content reveal-right">
+
+                <div class="section-label">
+                    selamat
+                </div>
 
                 <h2>
-                    Aku tahu kamu sedang berjuang.
+                    Kamu
+                    <br>
+                    <span>berhasil.</span>
                 </h2>
 
                 <p>
-                    Dan mungkin tidak semua orang melihat
-                    seberapa keras kamu berusaha.
-                </p>
-
-            </div>
-
-
-            <div class="message-box reveal">
-
-                <p>
-                    Halo Arina...
+                    Selamat ya, Arina.
+                    Selamat karena sudah berhasil melewati
+                    tahapan komprehensif.
                 </p>
 
                 <p>
-                    Aku cuma ingin mengingatkan kamu bahwa
-                    <span class="highlight">
-                        kamu tidak harus selalu terlihat kuat.
-                    </span>
-                </p>
-
-                <p>
-                    Kalau hari ini kamu capek,
-                    istirahatlah sebentar.
-                    Kalau sesuatu belum berhasil,
-                    tidak apa-apa.
-                    Kegagalan bukan berarti semuanya selesai.
-                </p>
-
-                <p>
-                    Kadang kita hanya membutuhkan sedikit waktu
-                    untuk mengumpulkan tenaga sebelum kembali
-                    melangkah.
-                </p>
-
-                <p>
-                    Jadi jangan terlalu keras kepada dirimu sendiri.
-                    Lihatlah sejauh mana kamu sudah berjalan.
-                    Ada banyak hal yang dulu terasa mustahil,
-                    tetapi ternyata berhasil kamu lewati.
-                </p>
-
-                <p>
-                    <span class="highlight">
-                        Dan aku percaya, kali ini kamu Pasti bisa.
-                    </span>
+                    Semoga semua rasa lelah yang pernah datang
+                    selama prosesnya bisa terbayarkan dengan
+                    rasa bangga ketika melihat kembali perjalanan
+                    yang sudah kamu lewati.
                 </p>
 
             </div>
@@ -1047,232 +1565,88 @@
         </div>
 
     </section>
+
 
 
     <!-- =====================================================
-         QUOTE
-    ====================================================== -->
+         PERSONAL MESSAGE
+    ===================================================== -->
 
-    <section class="quote-section">
+    <section class="section message">
 
-        <div class="container">
+        <div class="message-box reveal">
 
-            <div class="reveal">
+            <p>
+                “Tidak semua orang tahu seberapa panjang
+                perjalananmu sampai berada di titik ini.
+                Jadi jangan lupa untuk mengapresiasi
+                dirimu sendiri.”
+            </p>
 
-                <div class="quote">
-
-                    Tidak apa-apa berjalan
-                    perlahan.
-                    Yang penting,
-                    jangan berhenti.
-
-                </div>
-
-                <div class="quote-author">
-                    UNTUK KAMU YANG SEDANG BERJUANG
-                </div>
-
+            <div class="message-sign">
+                — untuk Arina
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- =====================================================
-         REMEMBER
-    ====================================================== -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-title reveal">
-
-                <small>
-                    Ingat ini
-                </small>
-
-                <h2>
-                    Beberapa hal kecil.
-                </h2>
-
-                <p>
-                    Saat semuanya terasa terlalu berat,
-                    ingat beberapa hal sederhana ini.
-                </p>
-
-            </div>
-
-
-            <div class="cards">
-
-                <div class="card reveal">
-
-                    
-
-                    <h3>
-                        Pelan-pelan
-                    </h3>
-
-                    <p>
-                        Kamu tidak perlu menyelesaikan
-                        semuanya dalam satu hari.
-                        Satu langkah kecil tetap berarti.
-                    </p>
-
-                </div>
-
-
-                <div class="card reveal">
-
-                    
-
-                    <h3>
-                        Istirahat
-                    </h3>
-
-                    <p>
-                        Beristirahat bukan berarti menyerah.
-                        Kadang tubuh dan pikiran hanya
-                        membutuhkan waktu untuk bernapas.
-                    </p>
-
-                </div>
-
-
-                <div class="card reveal">
-
-
-                    <h3>
-                        Percaya
-                    </h3>
-
-                    <p>
-                        Jangan biarkan satu hari yang buruk
-                        membuatmu meragukan semua kemampuan
-                        yang kamu punya.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 
 
     <!-- =====================================================
          FINAL
-    ====================================================== -->
+    ===================================================== -->
 
     <section class="final">
 
-        <div class="container">
+        <div class="reveal">
 
-            <div class="reveal">
-
-                <div class="final-heart">
-                    🤍
-                </div>
-
-                <h2>
-                    Kamu tidak sendirian.
-                </h2>
-
-                <p>
-                    Apapun yang sedang kamu hadapi sekarang,
-                    semoga kamu selalu menemukan alasan untuk
-                    terus melangkah.
-
-                    Tidak perlu terburu-buru.
-                    Tidak perlu sempurna.
-
-                    Cukup terus mencoba.
-                </p>
-
-                <div class="signature">
-
-                    Aku percaya kamu pasti bisa lewatin ini semua.
-
-                </div>
-
+            <div class="section-label">
+                satu hal terakhir
             </div>
+
+            <h2>
+                Proud of you,
+                <br>
+                <span>Arina🤍.</span>
+            </h2>
+
+            <p>
+                UNTUK SEMUA USAHA, SABAR, DAN KEBERANIANMU YANG SUDAH MEMBAWA KAMU SAMPAI DI TITIK INI.
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        Made with a little bit of care 
-
-    </footer>
-
 
     <!-- =====================================================
          JAVASCRIPT
-    ====================================================== -->
+    ===================================================== -->
 
     <script>
 
-
-        /* =====================================================
-           CREATE STARS
-        ====================================================== */
-
-        const stars =
-            document.getElementById("stars");
-
-        for (let i = 0; i < 120; i++) {
-
-            const star =
-                document.createElement("div");
-
-            star.className = "star";
-
-            star.style.left =
-                Math.random() * 100 + "%";
-
-            star.style.top =
-                Math.random() * 100 + "%";
-
-            star.style.animationDelay =
-                Math.random() * 4 + "s";
-
-            star.style.animationDuration =
-                2 + Math.random() * 4 + "s";
-
-            stars.appendChild(star);
-        }
-
-
         /* =====================================================
            SCROLL REVEAL
-        ====================================================== */
+        ===================================================== */
 
         const revealElements =
-            document.querySelectorAll(".reveal");
+            document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right"
+            );
 
 
         const observer =
             new IntersectionObserver(
 
-                entries => {
+                (entries) => {
 
                     entries.forEach(entry => {
 
                         if (entry.isIntersecting) {
 
-                            entry.target.classList.add(
-                                "active"
-                            );
+                            entry.target.classList.add("active");
 
                         }
 
@@ -1281,122 +1655,71 @@
                 },
 
                 {
-                    threshold: .15
+                    threshold: 0.15
                 }
 
             );
 
 
-        revealElements.forEach(
-            element => observer.observe(element)
-        );
+        revealElements.forEach(element => {
 
+            observer.observe(element);
 
-        /* =====================================================
-           FLOATING HEARTS
-        ====================================================== */
+        });
 
-        const hearts = [
-            "🤍",
-            "💙",
-            "✨",
-            "🌙"
-        ];
-
-
-        function createHeart() {
-
-            const heart =
-                document.createElement("div");
-
-            heart.className =
-                "floating-heart";
-
-            heart.innerText =
-                hearts[
-                    Math.floor(
-                        Math.random() *
-                        hearts.length
-                    )
-                ];
-
-            heart.style.left =
-                Math.random() * 100 + "%";
-
-            heart.style.animationDuration =
-                7 + Math.random() * 8 + "s";
-
-            heart.style.fontSize =
-                12 + Math.random() * 12 + "px";
-
-            document.body.appendChild(heart);
-
-
-            setTimeout(() => {
-
-                heart.remove();
-
-            }, 15000);
-
-        }
-
-
-        setInterval(
-            createHeart,
-            1000
-        );
 
 
         /* =====================================================
-           MUSIC
-           
-           Kalau mau menggunakan musik:
-           1. Masukkan file musik.mp3
-              di folder yang sama.
-           2. Hapus tanda komentar pada audio.
-        ====================================================== */
+           PHOTO STAGE OBSERVER
+        ===================================================== */
 
-        /*
-        const music = new Audio("musik.mp3");
-
-        music.loop = true;
-
-        function toggleMusic() {
-
-            if (music.paused) {
-
-                music.play();
-
-                document.getElementById("musicBtn")
-                    .innerHTML = "❚❚";
-
-            } else {
-
-                music.pause();
-
-                document.getElementById("musicBtn")
-                    .innerHTML = "♪";
-
-            }
-
-        }
-        */
+        const photoGallery =
+            document.querySelector(".photo-gallery");
 
 
-        /* =====================================================
-           MUSIC BUTTON DEFAULT
-        ====================================================== */
+        const photoObserver =
+            new IntersectionObserver(
 
-        function toggleMusic() {
+                (entries) => {
 
-            alert(
-                "Tambahkan file musik.mp3 di folder website, lalu aktifkan kode musik di bagian JavaScript."
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            photoGallery.classList.add("active");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.35
+                }
+
             );
 
+
+        if (photoGallery) {
+
+            photoObserver.observe(photoGallery);
+
         }
+
+
+
+        /* =====================================================
+           PAGE LOAD
+        ===================================================== */
+
+        window.addEventListener("load", () => {
+
+            document.body.classList.add("loaded");
+
+        });
 
     </script>
 
 </body>
 </html>
-```
